@@ -22,12 +22,12 @@ Create new shipping for an existing orden
 
 ```java
 // Import classes:
-import com.digitalfemsa.ApiClient;
-import com.digitalfemsa.ApiException;
-import com.digitalfemsa.Configuration;
-import com.digitalfemsa.auth.*;
-import com.digitalfemsa.model.*;
-import com.digitalfemsa.ShippingsApi;
+import io.digitalfemsa.ApiClient;
+import io.digitalfemsa.ApiException;
+import io.digitalfemsa.Configuration;
+import io.digitalfemsa.auth.*;
+import io.digitalfemsa.model.*;
+import io.digitalfemsa.ShippingsApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -101,12 +101,12 @@ Delete shipping
 
 ```java
 // Import classes:
-import com.digitalfemsa.ApiClient;
-import com.digitalfemsa.ApiException;
-import com.digitalfemsa.Configuration;
-import com.digitalfemsa.auth.*;
-import com.digitalfemsa.model.*;
-import com.digitalfemsa.ShippingsApi;
+import io.digitalfemsa.ApiClient;
+import io.digitalfemsa.ApiException;
+import io.digitalfemsa.Configuration;
+import io.digitalfemsa.auth.*;
+import io.digitalfemsa.model.*;
+import io.digitalfemsa.ShippingsApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -182,12 +182,12 @@ Update existing shipping for an existing orden
 
 ```java
 // Import classes:
-import com.digitalfemsa.ApiClient;
-import com.digitalfemsa.ApiException;
-import com.digitalfemsa.Configuration;
-import com.digitalfemsa.auth.*;
-import com.digitalfemsa.model.*;
-import com.digitalfemsa.ShippingsApi;
+import io.digitalfemsa.ApiClient;
+import io.digitalfemsa.ApiException;
+import io.digitalfemsa.Configuration;
+import io.digitalfemsa.auth.*;
+import io.digitalfemsa.model.*;
+import io.digitalfemsa.ShippingsApi;
 
 public class Example {
     public static void main(String[] args) {

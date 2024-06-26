@@ -11,9 +11,9 @@ Customer information
 ## Example
 ```java
 // Import classes:
-import com.digitalfemsa.model.OrderRequestCustomerInfo;
-import com.digitalfemsa.model.CustomerInfo;
-import com.digitalfemsa.model.CustomerInfoJustCustomerId;
+import io.digitalfemsa.model.OrderRequestCustomerInfo;
+import io.digitalfemsa.model.CustomerInfo;
+import io.digitalfemsa.model.CustomerInfoJustCustomerId;
 
 public class Example {
     public static void main(String[] args) {

@@ -8598,6 +8598,15 @@ paths:
         schema:
           type: string
         style: form
+      - description: url for webhook filter
+        example: https://api.digitalfemsa.io/webhook
+        explode: true
+        in: query
+        name: url
+        required: false
+        schema:
+          type: string
+        style: form
       - description: next page
         explode: true
         in: query
@@ -9662,6 +9671,16 @@ components:
         example: MXN
         type: string
       style: form
+    url:
+      description: url for webhook filter
+      example: https://api.digitalfemsa.io/webhook
+      explode: true
+      in: query
+      name: url
+      required: false
+      schema:
+        type: string
+      style: form
   requestBodies:
     api_keys_create:
       content:
@@ -10706,8 +10725,6 @@ components:
             structured format.
           maxProperties: 100
           type: object
-        next_action:
-          $ref: '#/components/schemas/order_next_action_response'
         object:
           description: String representing the object’s type. Objects of the same
             type share the same value.
@@ -11508,12 +11525,6 @@ components:
           description: "Indicates the processing mode for the order, either ecommerce,\
             \ recurrent or validation."
           example: ecommerce
-          type: string
-        return_url:
-          description: Indicates the redirection callback upon completion of the 3DS2
-            flow.
-          example: https://my-website.com
-          format: uri
           type: string
         shipping_contact:
           $ref: '#/components/schemas/customer_shipping_contacts'
@@ -13159,35 +13170,6 @@ components:
             type: array
         type: object
       title: order_response_products
-    order_next_action_response_redirect_to_url:
-      description: contains the following attributes that will guide to continue the
-        flow
-      properties:
-        url:
-          description: "pay.femsa.com/{id} Indicates the url of the Femsa component\
-            \ to authenticate the flow through 3DS2."
-          example: https://pay.femsa.com/6fca054a85194c43971ecea35cc519bb
-          format: uri
-          type: string
-        return_url:
-          description: "Indicates the url to which the 3DS2 flow returns at the end,\
-            \ when the integration is redirected."
-          example: https://my-website.com"
-          format: uri
-          type: string
-      type: object
-    order_next_action_response:
-      description: contains the following attributes that will guide to continue the
-        flow
-      properties:
-        redirect_to_url:
-          $ref: '#/components/schemas/order_next_action_response_redirect_to_url'
-        type:
-          description: Indicates the type of action to be taken
-          example: redirect_to_url
-          type: string
-      title: order_next_action_response
-      type: object
     order_response_shipping_contact:
       allOf:
       - properties:

@@ -24,12 +24,12 @@ Create a webhook key
 
 ```java
 // Import classes:
-import com.digitalfemsa.ApiClient;
-import com.digitalfemsa.ApiException;
-import com.digitalfemsa.Configuration;
-import com.digitalfemsa.auth.*;
-import com.digitalfemsa.model.*;
-import com.digitalfemsa.WebhookKeysApi;
+import io.digitalfemsa.ApiClient;
+import io.digitalfemsa.ApiException;
+import io.digitalfemsa.Configuration;
+import io.digitalfemsa.auth.*;
+import io.digitalfemsa.model.*;
+import io.digitalfemsa.WebhookKeysApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -96,12 +96,12 @@ Delete Webhook key
 
 ```java
 // Import classes:
-import com.digitalfemsa.ApiClient;
-import com.digitalfemsa.ApiException;
-import com.digitalfemsa.Configuration;
-import com.digitalfemsa.auth.*;
-import com.digitalfemsa.model.*;
-import com.digitalfemsa.WebhookKeysApi;
+import io.digitalfemsa.ApiClient;
+import io.digitalfemsa.ApiException;
+import io.digitalfemsa.Configuration;
+import io.digitalfemsa.auth.*;
+import io.digitalfemsa.model.*;
+import io.digitalfemsa.WebhookKeysApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -169,12 +169,12 @@ Get Webhook Key
 
 ```java
 // Import classes:
-import com.digitalfemsa.ApiClient;
-import com.digitalfemsa.ApiException;
-import com.digitalfemsa.Configuration;
-import com.digitalfemsa.auth.*;
-import com.digitalfemsa.model.*;
-import com.digitalfemsa.WebhookKeysApi;
+import io.digitalfemsa.ApiClient;
+import io.digitalfemsa.ApiException;
+import io.digitalfemsa.Configuration;
+import io.digitalfemsa.auth.*;
+import io.digitalfemsa.model.*;
+import io.digitalfemsa.WebhookKeysApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -246,12 +246,12 @@ Consume the list of webhook keys you have
 
 ```java
 // Import classes:
-import com.digitalfemsa.ApiClient;
-import com.digitalfemsa.ApiException;
-import com.digitalfemsa.Configuration;
-import com.digitalfemsa.auth.*;
-import com.digitalfemsa.model.*;
-import com.digitalfemsa.WebhookKeysApi;
+import io.digitalfemsa.ApiClient;
+import io.digitalfemsa.ApiException;
+import io.digitalfemsa.Configuration;
+import io.digitalfemsa.auth.*;
+import io.digitalfemsa.model.*;
+import io.digitalfemsa.WebhookKeysApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -328,12 +328,12 @@ updates an existing webhook key
 
 ```java
 // Import classes:
-import com.digitalfemsa.ApiClient;
-import com.digitalfemsa.ApiException;
-import com.digitalfemsa.Configuration;
-import com.digitalfemsa.auth.*;
-import com.digitalfemsa.model.*;
-import com.digitalfemsa.WebhookKeysApi;
+import io.digitalfemsa.ApiClient;
+import io.digitalfemsa.ApiException;
+import io.digitalfemsa.Configuration;
+import io.digitalfemsa.auth.*;
+import io.digitalfemsa.model.*;
+import io.digitalfemsa.WebhookKeysApi;
 
 public class Example {
     public static void main(String[] args) {

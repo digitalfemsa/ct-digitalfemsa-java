@@ -24,12 +24,12 @@ Create a api key
 
 ```java
 // Import classes:
-import com.digitalfemsa.ApiClient;
-import com.digitalfemsa.ApiException;
-import com.digitalfemsa.Configuration;
-import com.digitalfemsa.auth.*;
-import com.digitalfemsa.model.*;
-import com.digitalfemsa.ApiKeysApi;
+import io.digitalfemsa.ApiClient;
+import io.digitalfemsa.ApiException;
+import io.digitalfemsa.Configuration;
+import io.digitalfemsa.auth.*;
+import io.digitalfemsa.model.*;
+import io.digitalfemsa.ApiKeysApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -101,12 +101,12 @@ Deletes a api key that corresponds to a api key ID
 
 ```java
 // Import classes:
-import com.digitalfemsa.ApiClient;
-import com.digitalfemsa.ApiException;
-import com.digitalfemsa.Configuration;
-import com.digitalfemsa.auth.*;
-import com.digitalfemsa.model.*;
-import com.digitalfemsa.ApiKeysApi;
+import io.digitalfemsa.ApiClient;
+import io.digitalfemsa.ApiException;
+import io.digitalfemsa.Configuration;
+import io.digitalfemsa.auth.*;
+import io.digitalfemsa.model.*;
+import io.digitalfemsa.ApiKeysApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -176,12 +176,12 @@ Gets a api key that corresponds to a api key ID
 
 ```java
 // Import classes:
-import com.digitalfemsa.ApiClient;
-import com.digitalfemsa.ApiException;
-import com.digitalfemsa.Configuration;
-import com.digitalfemsa.auth.*;
-import com.digitalfemsa.model.*;
-import com.digitalfemsa.ApiKeysApi;
+import io.digitalfemsa.ApiClient;
+import io.digitalfemsa.ApiException;
+import io.digitalfemsa.Configuration;
+import io.digitalfemsa.auth.*;
+import io.digitalfemsa.model.*;
+import io.digitalfemsa.ApiKeysApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -253,12 +253,12 @@ Consume the list of api keys you have
 
 ```java
 // Import classes:
-import com.digitalfemsa.ApiClient;
-import com.digitalfemsa.ApiException;
-import com.digitalfemsa.Configuration;
-import com.digitalfemsa.auth.*;
-import com.digitalfemsa.model.*;
-import com.digitalfemsa.ApiKeysApi;
+import io.digitalfemsa.ApiClient;
+import io.digitalfemsa.ApiException;
+import io.digitalfemsa.Configuration;
+import io.digitalfemsa.auth.*;
+import io.digitalfemsa.model.*;
+import io.digitalfemsa.ApiKeysApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -335,12 +335,12 @@ Update an existing api key
 
 ```java
 // Import classes:
-import com.digitalfemsa.ApiClient;
-import com.digitalfemsa.ApiException;
-import com.digitalfemsa.Configuration;
-import com.digitalfemsa.auth.*;
-import com.digitalfemsa.model.*;
-import com.digitalfemsa.ApiKeysApi;
+import io.digitalfemsa.ApiClient;
+import io.digitalfemsa.ApiException;
+import io.digitalfemsa.Configuration;
+import io.digitalfemsa.auth.*;
+import io.digitalfemsa.model.*;
+import io.digitalfemsa.ApiKeysApi;
 
 public class Example {
     public static void main(String[] args) {

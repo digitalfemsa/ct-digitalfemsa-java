@@ -23,12 +23,12 @@ Create a payment method for a customer.
 
 ```java
 // Import classes:
-import com.digitalfemsa.ApiClient;
-import com.digitalfemsa.ApiException;
-import com.digitalfemsa.Configuration;
-import com.digitalfemsa.auth.*;
-import com.digitalfemsa.model.*;
-import com.digitalfemsa.PaymentMethodsApi;
+import io.digitalfemsa.ApiClient;
+import io.digitalfemsa.ApiException;
+import io.digitalfemsa.Configuration;
+import io.digitalfemsa.auth.*;
+import io.digitalfemsa.model.*;
+import io.digitalfemsa.PaymentMethodsApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -103,12 +103,12 @@ Delete an existing payment method
 
 ```java
 // Import classes:
-import com.digitalfemsa.ApiClient;
-import com.digitalfemsa.ApiException;
-import com.digitalfemsa.Configuration;
-import com.digitalfemsa.auth.*;
-import com.digitalfemsa.model.*;
-import com.digitalfemsa.PaymentMethodsApi;
+import io.digitalfemsa.ApiClient;
+import io.digitalfemsa.ApiException;
+import io.digitalfemsa.Configuration;
+import io.digitalfemsa.auth.*;
+import io.digitalfemsa.model.*;
+import io.digitalfemsa.PaymentMethodsApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -183,12 +183,12 @@ Get a list of Payment Methods
 
 ```java
 // Import classes:
-import com.digitalfemsa.ApiClient;
-import com.digitalfemsa.ApiException;
-import com.digitalfemsa.Configuration;
-import com.digitalfemsa.auth.*;
-import com.digitalfemsa.model.*;
-import com.digitalfemsa.PaymentMethodsApi;
+import io.digitalfemsa.ApiClient;
+import io.digitalfemsa.ApiException;
+import io.digitalfemsa.Configuration;
+import io.digitalfemsa.auth.*;
+import io.digitalfemsa.model.*;
+import io.digitalfemsa.PaymentMethodsApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -268,12 +268,12 @@ Gets a payment Method that corresponds to a customer ID.
 
 ```java
 // Import classes:
-import com.digitalfemsa.ApiClient;
-import com.digitalfemsa.ApiException;
-import com.digitalfemsa.Configuration;
-import com.digitalfemsa.auth.*;
-import com.digitalfemsa.model.*;
-import com.digitalfemsa.PaymentMethodsApi;
+import io.digitalfemsa.ApiClient;
+import io.digitalfemsa.ApiException;
+import io.digitalfemsa.Configuration;
+import io.digitalfemsa.auth.*;
+import io.digitalfemsa.model.*;
+import io.digitalfemsa.PaymentMethodsApi;
 
 public class Example {
     public static void main(String[] args) {

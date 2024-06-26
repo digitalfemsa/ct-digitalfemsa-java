@@ -22,12 +22,12 @@ Create new taxes for an existing orden
 
 ```java
 // Import classes:
-import com.digitalfemsa.ApiClient;
-import com.digitalfemsa.ApiException;
-import com.digitalfemsa.Configuration;
-import com.digitalfemsa.auth.*;
-import com.digitalfemsa.model.*;
-import com.digitalfemsa.TaxesApi;
+import io.digitalfemsa.ApiClient;
+import io.digitalfemsa.ApiException;
+import io.digitalfemsa.Configuration;
+import io.digitalfemsa.auth.*;
+import io.digitalfemsa.model.*;
+import io.digitalfemsa.TaxesApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -101,12 +101,12 @@ Delete taxes for an existing orden
 
 ```java
 // Import classes:
-import com.digitalfemsa.ApiClient;
-import com.digitalfemsa.ApiException;
-import com.digitalfemsa.Configuration;
-import com.digitalfemsa.auth.*;
-import com.digitalfemsa.model.*;
-import com.digitalfemsa.TaxesApi;
+import io.digitalfemsa.ApiClient;
+import io.digitalfemsa.ApiException;
+import io.digitalfemsa.Configuration;
+import io.digitalfemsa.auth.*;
+import io.digitalfemsa.model.*;
+import io.digitalfemsa.TaxesApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -181,12 +181,12 @@ Update taxes for an existing orden
 
 ```java
 // Import classes:
-import com.digitalfemsa.ApiClient;
-import com.digitalfemsa.ApiException;
-import com.digitalfemsa.Configuration;
-import com.digitalfemsa.auth.*;
-import com.digitalfemsa.model.*;
-import com.digitalfemsa.TaxesApi;
+import io.digitalfemsa.ApiClient;
+import io.digitalfemsa.ApiException;
+import io.digitalfemsa.Configuration;
+import io.digitalfemsa.auth.*;
+import io.digitalfemsa.model.*;
+import io.digitalfemsa.TaxesApi;
 
 public class Example {
     public static void main(String[] args) {
