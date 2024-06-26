@@ -10,8 +10,8 @@ Contains details of the payment methods that the customer has active or has used
 ## Example
 ```java
 // Import classes:
-import com.digitalfemsa.model.CreateCustomerPaymentMethodsRequest;
-import com.digitalfemsa.model.PaymentMethodCashRequest;
+import io.digitalfemsa.model.CreateCustomerPaymentMethodsRequest;
+import io.digitalfemsa.model.PaymentMethodCashRequest;
 
 public class Example {
     public static void main(String[] args) {

@@ -78,10 +78,10 @@ Then manually install the following JARs:
 
 To add a HTTP proxy for the API client, use `ClientConfig`:
 ```java
-import com.digitalfemsa.*;
-import com.digitalfemsa.auth.*;
-import com.digitalfemsa.model.*;
-import com.digitalfemsa.CustomersApi;
+import io.digitalfemsa.*;
+import io.digitalfemsa.auth.*;
+import io.digitalfemsa.model.*;
+import io.digitalfemsa.CustomersApi;
 
 public class CustomersApiExample {
 
@@ -117,10 +117,10 @@ public class CustomersApiExample {
 Please follow the [installation](#installation) instruction and execute the following Java code:
 
 ```java
-import com.digitalfemsa.*;
-import com.digitalfemsa.auth.*;
-import com.digitalfemsa.model.*;
-import com.digitalfemsa.CustomersApi;
+import io.digitalfemsa.*;
+import io.digitalfemsa.auth.*;
+import io.digitalfemsa.model.*;
+import io.digitalfemsa.CustomersApi;
 
 public class CustomersApiExample {
 
@@ -320,8 +320,6 @@ Class | Method | HTTP request | Description
  - [OrderFiscalEntityAddressResponse](docs/OrderFiscalEntityAddressResponse.md)
  - [OrderFiscalEntityRequest](docs/OrderFiscalEntityRequest.md)
  - [OrderFiscalEntityResponse](docs/OrderFiscalEntityResponse.md)
- - [OrderNextActionResponse](docs/OrderNextActionResponse.md)
- - [OrderNextActionResponseRedirectToUrl](docs/OrderNextActionResponseRedirectToUrl.md)
  - [OrderRefundRequest](docs/OrderRefundRequest.md)
  - [OrderRequest](docs/OrderRequest.md)
  - [OrderRequestCustomerInfo](docs/OrderRequestCustomerInfo.md)

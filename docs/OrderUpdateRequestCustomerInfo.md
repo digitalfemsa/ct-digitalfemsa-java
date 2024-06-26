@@ -9,9 +9,9 @@
 ## Example
 ```java
 // Import classes:
-import com.digitalfemsa.model.OrderUpdateRequestCustomerInfo;
-import com.digitalfemsa.model.CustomerInfo;
-import com.digitalfemsa.model.CustomerInfoJustCustomerId;
+import io.digitalfemsa.model.OrderUpdateRequestCustomerInfo;
+import io.digitalfemsa.model.CustomerInfo;
+import io.digitalfemsa.model.CustomerInfoJustCustomerId;
 
 public class Example {
     public static void main(String[] args) {

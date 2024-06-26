@@ -11,9 +11,9 @@ It is the information of the customer who will be created when receiving a new p
 ## Example
 ```java
 // Import classes:
-import com.digitalfemsa.model.CheckoutOrderTemplateCustomerInfo;
-import com.digitalfemsa.model.CustomerInfo;
-import com.digitalfemsa.model.CustomerInfoJustCustomerId;
+import io.digitalfemsa.model.CheckoutOrderTemplateCustomerInfo;
+import io.digitalfemsa.model.CustomerInfo;
+import io.digitalfemsa.model.CustomerInfoJustCustomerId;
 
 public class Example {
     public static void main(String[] args) {

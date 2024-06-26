@@ -8,8 +8,8 @@
 ## Example
 ```java
 // Import classes:
-import com.digitalfemsa.model.ChargeResponsePaymentMethod;
-import com.digitalfemsa.model.PaymentMethodCash;
+import io.digitalfemsa.model.ChargeResponsePaymentMethod;
+import io.digitalfemsa.model.PaymentMethodCash;
 
 public class Example {
     public static void main(String[] args) {

@@ -1,7 +1,7 @@
 
 java:
 	rm -rf docs && \
-	rm -rf src/main/java/com/digitalfemsa/model && \
+	rm -rf src/main/java/io/digitalfemsa/model && \
 	docker run --rm \
     	-v ${PWD}:/local openapitools/openapi-generator-cli:v7.5.0 generate \
 		-i https://raw.githubusercontent.com/digitalfemsa/openapi/main/_build/api.yaml \
