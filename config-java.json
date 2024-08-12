@@ -1,0 +1,40 @@
+{
+    "snapshotVersion": false,
+    "useRuntimeException": true,
+    "developerEmail": "core@digitalfemsa.com",
+    "developerName": "DigitalFemsa API Core Team",
+    "developerOrganization": "DigitalFemsa, Inc.",
+    "developerOrganizationUrl": "https://www.digitalfemsa.io",
+    "artifactUrl": "https://developers.digitalfemsa.com/",
+    "artifactVersion": "1.0.0",
+    "modelPackage": "io.digitalfemsa.model",
+    "licenseName": "MIT License",
+    "invokerPackage": "io.digitalfemsa",
+    "licenseUrl": "https://www.opensource.org/licenses/mit-license.php",
+    "apiPackage": "io.digitalfemsa",
+    "artifactDescription": "This is a java library that allows interaction with https://api.digitalfemsa.io API.",
+    "artifactId": "ct-digitalfemsa-java",
+    "groupId": "io.digitalfemsa",
+    "useJakartaEe" : false,
+    "scmConnection": "scm:git:git@github.com:digitalfemsa/ct-digitalfemsa-java.git",
+    "scmDeveloperConnection": "scm:git:git@github.com:digitalfemsa/ct-digitalfemsa-java.git",
+    "scmUrl": "https://github.com/digitalfemsa/ct-digitalfemsa-java/tree/main",
+    "library": "jersey2",
+    "files": {
+        "/local/CODE_OF_CONDUCT.md": {},
+        "/local/LICENSE": {},
+        "VERSION.mustache" : {
+            "templateType": "SupportingFiles",
+            "destinationFilename": "VERSION"
+        }
+    },
+    "javaMinVersion": 11,
+    "swagger1AnnotationLibrary": false,
+    "javaxPackage": "javax",
+    "templateDir": "local/templates/java/jersey2",
+    "disallowAdditionalPropertiesIfNotPresent": true,
+    "useOneOfDiscriminatorLookup": true,
+    "serializationLibrary": "jackson",
+    "httpUserAgent": "App/v2 JavaBindings/6.1.1",
+    "openApiNullable" : false
+}
