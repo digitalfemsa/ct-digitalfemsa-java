@@ -5,7 +5,7 @@
     <artifactId>ct-digitalfemsa-java</artifactId>
     <packaging>jar</packaging>
     <name>ct-digitalfemsa-java</name>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
     <url>https://developers.digitalfemsa.com/</url>
     <description>This is a java library that allows interaction with https://api.digitalfemsa.io API.</description>
     <scm>
@@ -98,8 +98,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.10.1</version>
                 <configuration>
-                    <source>11</source>
-                    <target>11</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
                     <fork>true</fork>
                     <meminitial>128m</meminitial>
                     <maxmem>512m</maxmem>
@@ -171,7 +171,7 @@
                 </executions>
                 <configuration>
                     <doclint>none</doclint>
-                    <source>11</source>
+                    <source>1.8</source>
                     <tags>
                         <tag>
                             <name>http.response.details</name>
@@ -252,7 +252,7 @@
 
                         <!-- apply a specific flavor of google-java-format and reflow long strings -->
                         <googleJavaFormat>
-                            <version>11</version>
+                            <version>1.8</version>
                             <style>AOSP</style>
                             <reflowLongStrings>true</reflowLongStrings>
                         </googleJavaFormat>
@@ -365,7 +365,7 @@
         </dependency>
     </dependencies>
     <properties>
-        <java.version>11</java.version>
+        <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <jersey-version>2.37</jersey-version>
         <jackson-version>2.15.2</jackson-version>
