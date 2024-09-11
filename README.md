@@ -14,7 +14,7 @@ Femsa sdk
 
 Building the API client library requires:
 
-1. Java 11+
+1. Java 1.8+
 2. Maven (3.8.3+)/Gradle (7.2+)
 
 ## Installation
@@ -41,7 +41,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>io.digitalfemsa</groupId>
   <artifactId>ct-digitalfemsa-java</artifactId>
-  <version>1.0.0</version>
+  <version>1.1.0</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -57,7 +57,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "io.digitalfemsa:ct-digitalfemsa-java:1.0.0"
+     implementation "io.digitalfemsa:ct-digitalfemsa-java:1.1.0"
   }
 ```
 
@@ -71,7 +71,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-- `target/ct-digitalfemsa-java-1.0.0.jar`
+- `target/ct-digitalfemsa-java-1.1.0.jar`
 - `target/lib/*.jar`
 
 ## Usage

@@ -6,7 +6,7 @@
     "developerOrganization": "DigitalFemsa, Inc.",
     "developerOrganizationUrl": "https://www.digitalfemsa.io",
     "artifactUrl": "https://developers.digitalfemsa.com/",
-    "artifactVersion": "1.0.0",
+    "artifactVersion": "1.1.0",
     "modelPackage": "io.digitalfemsa.model",
     "licenseName": "MIT License",
     "invokerPackage": "io.digitalfemsa",
@@ -28,13 +28,13 @@
             "destinationFilename": "VERSION"
         }
     },
-    "javaMinVersion": 11,
+    "javaMinVersion": 1.8,
     "swagger1AnnotationLibrary": false,
     "javaxPackage": "javax",
     "templateDir": "local/templates/java/jersey2",
     "disallowAdditionalPropertiesIfNotPresent": true,
     "useOneOfDiscriminatorLookup": true,
     "serializationLibrary": "jackson",
-    "httpUserAgent": "App/v2 JavaBindings/6.1.1",
+    "httpUserAgent": "App/v2 JavaBindings/1.1.0",
     "openApiNullable" : false
 }
