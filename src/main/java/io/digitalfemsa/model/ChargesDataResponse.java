@@ -42,6 +42,7 @@ import io.digitalfemsa.JSON;
   ChargesDataResponse.JSON_PROPERTY_DEVICE_FINGERPRINT,
   ChargesDataResponse.JSON_PROPERTY_FAILURE_CODE,
   ChargesDataResponse.JSON_PROPERTY_FAILURE_MESSAGE,
+  ChargesDataResponse.JSON_PROPERTY_FEE,
   ChargesDataResponse.JSON_PROPERTY_ID,
   ChargesDataResponse.JSON_PROPERTY_LIVEMODE,
   ChargesDataResponse.JSON_PROPERTY_OBJECT,
@@ -81,6 +82,9 @@ public class ChargesDataResponse {
 
   public static final String JSON_PROPERTY_FAILURE_MESSAGE = "failure_message";
   private String failureMessage;
+
+  public static final String JSON_PROPERTY_FEE = "fee";
+  private Integer fee;
 
   public static final String JSON_PROPERTY_ID = "id";
   private String id;
@@ -336,6 +340,29 @@ public class ChargesDataResponse {
     this.failureMessage = failureMessage;
   }
 
+  public ChargesDataResponse fee(Integer fee) {
+    this.fee = fee;
+    return this;
+  }
+
+  /**
+   * Get amount
+   * @return amount
+   **/
+  @javax.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_FEE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Integer getFee() {
+    return fee;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_FEE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setFee(Integer fee) {
+    this.fee = fee;
+  }
 
   public ChargesDataResponse id(String id) {
     this.id = id;
@@ -583,6 +610,7 @@ public class ChargesDataResponse {
         Objects.equals(this.deviceFingerprint, chargesDataResponse.deviceFingerprint) &&
         Objects.equals(this.failureCode, chargesDataResponse.failureCode) &&
         Objects.equals(this.failureMessage, chargesDataResponse.failureMessage) &&
+        Objects.equals(this.fee, chargesDataResponse.fee) &&
         Objects.equals(this.id, chargesDataResponse.id) &&
         Objects.equals(this.livemode, chargesDataResponse.livemode) &&
         Objects.equals(this._object, chargesDataResponse._object) &&
@@ -596,7 +624,7 @@ public class ChargesDataResponse {
 
   @Override
   public int hashCode() {
-    return Objects.hash(amount, channel, createdAt, currency, customerId, description, deviceFingerprint, failureCode, failureMessage, id, livemode, _object, orderId, paidAt, paymentMethod, referenceId, refunds, status);
+    return Objects.hash(amount, channel, createdAt, currency, customerId, description, deviceFingerprint, failureCode, failureMessage,fee, id, livemode, _object, orderId, paidAt, paymentMethod, referenceId, refunds, status);
   }
 
   @Override
@@ -612,6 +640,7 @@ public class ChargesDataResponse {
     sb.append("    deviceFingerprint: ").append(toIndentedString(deviceFingerprint)).append("\n");
     sb.append("    failureCode: ").append(toIndentedString(failureCode)).append("\n");
     sb.append("    failureMessage: ").append(toIndentedString(failureMessage)).append("\n");
+    sb.append("    fee: ").append(toIndentedString(fee)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    livemode: ").append(toIndentedString(livemode)).append("\n");
     sb.append("    _object: ").append(toIndentedString(_object)).append("\n");

@@ -13,31 +13,20 @@
 
 package io.digitalfemsa;
 
-import io.digitalfemsa.*;
-import io.digitalfemsa.auth.*;
-import io.digitalfemsa.model.Error;
-import io.digitalfemsa.model.GetOrdersResponse;
-import io.digitalfemsa.model.OrderCaptureRequest;
-import io.digitalfemsa.model.OrderRefundRequest;
-import io.digitalfemsa.model.OrderRequest;
-import io.digitalfemsa.model.OrderResponse;
-import io.digitalfemsa.model.OrderUpdateRequest;
-
+import io.digitalfemsa.model.*;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * API tests for OrdersApi
  */
 public class OrdersApiTest {
 
-    private final OrdersApi api = new OrdersApi();
+    private final OrdersApi api = new OrdersApi(new ApiClient().setBasePath(Utils.getBasePath()));
+
+
 
     /**
      * Cancel Order
@@ -64,11 +53,45 @@ public class OrdersApiTest {
      */
     @Test
     public void createOrderTest() throws ApiException {
-        //OrderRequest orderRequest = null;
-        //String acceptLanguage = null;
-        //String xChildCompanyId = null;
-        //OrderResponse response = api.createOrder(orderRequest, acceptLanguage, xChildCompanyId);
-        // TODO: test validations
+        OrderRequest orderRequest = new OrderRequest();
+        orderRequest.setCurrency("MXN");
+        orderRequest.setFiscalEntity(new OrderFiscalEntityRequest().metadata(new HashMap<>()));
+        orderRequest.setShippingContact(new CustomerShippingContacts().metadata(new HashMap<>()));
+        CustomerInfoJustCustomerId customer = new CustomerInfoJustCustomerId();
+        customer.setCustomerId("cus_2tYENskzTjjgkGQLt");
+        orderRequest.setCustomerInfo(new OrderRequestCustomerInfo(customer));
+        ChargeRequest chargeRequest = new ChargeRequest();
+        chargeRequest.setAmount(1000);
+        orderRequest.setCharges(Collections.singletonList(chargeRequest));
+        String acceptLanguage = "es";
+
+        OrderResponse response = api.createOrder(orderRequest, acceptLanguage, null);
+
+        Assertions.assertNotNull(response);
+    }
+
+    @Test
+    public void validFeeOrderResponseTest() throws ApiException {
+
+        OrderRequest orderRequest = new OrderRequest();
+        orderRequest.setCurrency("MXN");
+        orderRequest.setFiscalEntity(new OrderFiscalEntityRequest().metadata(new HashMap<>()));
+        orderRequest.setShippingContact(new CustomerShippingContacts().metadata(new HashMap<>()));
+        CustomerInfoJustCustomerId customer = new CustomerInfoJustCustomerId();
+        customer.setCustomerId("cus_2tYENskzTjjgkGQLt");
+        orderRequest.setCustomerInfo(new OrderRequestCustomerInfo(customer));
+        ChargeRequest chargeRequest = new ChargeRequest();
+        chargeRequest.setAmount(1000);
+        orderRequest.setCharges(Collections.singletonList(chargeRequest));
+        String acceptLanguage = "es";
+        OrderResponse response = api.createOrder(orderRequest, acceptLanguage, null);
+        Assertions.assertNotNull(response);
+        Assertions.assertNotNull(response.getCharges());
+        assertFalse(response.getCharges().getData().isEmpty());
+        assertTrue(response.getCharges().getData().get(0).getFee() > 0);
+
+
+
     }
 
     /**
