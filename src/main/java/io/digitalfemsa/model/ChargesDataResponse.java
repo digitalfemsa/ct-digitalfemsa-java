@@ -346,8 +346,8 @@ public class ChargesDataResponse {
   }
 
   /**
-   * Get amount
-   * @return amount
+   * Get fee
+   * @return fee
    **/
   @javax.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_FEE)

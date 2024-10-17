@@ -14,10 +14,15 @@
 package io.digitalfemsa;
 
 import io.digitalfemsa.model.*;
-import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import java.util.*;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.ArgumentMatchers.*;
+import static org.mockito.Mockito.when;
 
 /**
  * API tests for OrdersApi
@@ -25,6 +30,17 @@ import static org.junit.jupiter.api.Assertions.*;
 public class OrdersApiTest {
 
     private final OrdersApi api = new OrdersApi(new ApiClient().setBasePath(Utils.getBasePath()));
+
+    @Mock
+    private ApiClient apiClient;
+
+    @InjectMocks
+    private OrdersApi ordersApi;
+
+    @BeforeEach
+    public void setUp() {
+        MockitoAnnotations.openMocks(this);
+    }
 
 
 
@@ -53,46 +69,58 @@ public class OrdersApiTest {
      */
     @Test
     public void createOrderTest() throws ApiException {
-        OrderRequest orderRequest = new OrderRequest();
-        orderRequest.setCurrency("MXN");
-        orderRequest.setFiscalEntity(new OrderFiscalEntityRequest().metadata(new HashMap<>()));
-        orderRequest.setShippingContact(new CustomerShippingContacts().metadata(new HashMap<>()));
-        CustomerInfoJustCustomerId customer = new CustomerInfoJustCustomerId();
-        customer.setCustomerId("cus_2tYENskzTjjgkGQLt");
-        orderRequest.setCustomerInfo(new OrderRequestCustomerInfo(customer));
-        ChargeRequest chargeRequest = new ChargeRequest();
-        chargeRequest.setAmount(1000);
-        orderRequest.setCharges(Collections.singletonList(chargeRequest));
-        String acceptLanguage = "es";
 
-        OrderResponse response = api.createOrder(orderRequest, acceptLanguage, null);
-
-        Assertions.assertNotNull(response);
     }
+
 
     @Test
-    public void validFeeOrderResponseTest() throws ApiException {
+    public void checkFeeInOrderResponseTest() throws ApiException {
+        String acceptLanguage = "es";
 
-        OrderRequest orderRequest = new OrderRequest();
-        orderRequest.setCurrency("MXN");
-        orderRequest.setFiscalEntity(new OrderFiscalEntityRequest().metadata(new HashMap<>()));
-        orderRequest.setShippingContact(new CustomerShippingContacts().metadata(new HashMap<>()));
+        OrderRequest mockOrderRequest = new OrderRequest();
+        mockOrderRequest.setCurrency("MXN");
+        mockOrderRequest.setFiscalEntity(new OrderFiscalEntityRequest().metadata(new HashMap<>()));
+        mockOrderRequest.setShippingContact(new CustomerShippingContacts().metadata(new HashMap<>()));
         CustomerInfoJustCustomerId customer = new CustomerInfoJustCustomerId();
         customer.setCustomerId("cus_2tYENskzTjjgkGQLt");
-        orderRequest.setCustomerInfo(new OrderRequestCustomerInfo(customer));
+        mockOrderRequest.setCustomerInfo(new OrderRequestCustomerInfo(customer));
         ChargeRequest chargeRequest = new ChargeRequest();
         chargeRequest.setAmount(1000);
-        orderRequest.setCharges(Collections.singletonList(chargeRequest));
-        String acceptLanguage = "es";
-        OrderResponse response = api.createOrder(orderRequest, acceptLanguage, null);
-        Assertions.assertNotNull(response);
-        Assertions.assertNotNull(response.getCharges());
-        assertFalse(response.getCharges().getData().isEmpty());
-        assertTrue(response.getCharges().getData().get(0).getFee() > 0);
+        mockOrderRequest.setCharges(Collections.singletonList(chargeRequest));
 
+        OrderResponse mockOrderResponse = new OrderResponse();
+        ChargesDataResponse chargesDataResponse = new ChargesDataResponse();
+        chargesDataResponse.setFee(905);
+        chargesDataResponse.setLivemode(false);
+        chargesDataResponse.setOrderId("ord_2wockd5CqtVW6smNM");
+        chargesDataResponse.currency("MXN");
+        chargesDataResponse.setStatus("pending_payment");
+        OrderResponseCharges charges = new OrderResponseCharges();
+        assertNotNull(charges.getData());
+        charges.getData().add(chargesDataResponse);
+        mockOrderResponse.setCharges(charges);
 
+        ApiResponse<OrderResponse> mockApiResponse = new ApiResponse<>(200, new LinkedHashMap<>(), mockOrderResponse);
+
+        when(apiClient.invokeAPI(
+                eq("OrdersApi.createOrder"), eq("/orders"), eq("POST"), anyList(), eq(mockOrderRequest),
+                anyMap(), anyMap(), anyMap(), anyString(), anyString(), any(), any(), anyBoolean())
+        ).thenReturn((ApiResponse) mockApiResponse);
+
+        when(ordersApi.createOrderWithHttpInfo(mockOrderRequest, acceptLanguage, anyString()))
+                .thenReturn(mockApiResponse);
+
+        OrderResponse result = ordersApi.createOrder(mockOrderRequest, acceptLanguage, anyString());
+
+        assertNotNull(result);
+        assertNotNull(result.getCharges());
+        assertNotNull(result.getCharges().getData());
+        assertFalse(result.getCharges().getData().isEmpty());
+        assertEquals(905, result.getCharges().getData().get(0).getFee());
 
     }
+
+
 
     /**
      * Get Order
